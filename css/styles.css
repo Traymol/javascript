@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #C9E3AC;
+  font-family: "Fira Sans", Verdana;
+  color: black;
+}
+
+/* ------------------------------------------------HEADER------------------------------------------------ */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  height: 90px;
+  background-color: #90BE6D;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header nav img {
+  height: 80px;
+  margin-left: 10px;
+}
+header nav ul {
+  list-style: none;
+  font-size: 25px;
+  margin-left: 100px;
+}
+header nav ul li {
+  margin-right: 80px;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+/* -------------------------------------------------MAIN------------------------------------------------ */
+.fondoIndex {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.fondoIndex::before {
+  content: "";
+  position: absolute;
+  background-image: url("../multimedia/fumigacion-1-1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 900px;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+.fondoIndex .mainIndex {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.fondoIndex .mainIndex h1 {
+  margin: 40px 40px;
+  z-index: 9;
+  color: white;
+  font-size: 90px;
+}
+
+.mainSobreNosotros, .mainLocalidades {
+  background-color: #EA9010;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mainSobreNosotros h1, .mainLocalidades h1 {
+  font-size: 50px;
+  padding: 50px 0;
+}
+
+.lineaHorizontal {
+  border-top: 1px solid black;
+  margin: 45px 5px 40px 5px;
+}
+
+.mainContacto {
+  background-color: #EA9010;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mainContacto h1 {
+  text-align: center;
+  font-size: 30px;
+  width: 700px;
+  background-color: #eea43c;
+  margin-top: 30px;
+}
+.mainContacto h2 {
+  margin: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.mainClientes {
+  background-color: #EA9010;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.mainClientes h1 {
+  font-size: 50px;
+  padding: 50px;
+}
+
+/* -------------------------------------------------SECTION------------------------------------------------ */
+.sectionIndex {
+  width: 70%;
+}
+.sectionIndex h2 {
+  margin-top: 40px;
+  margin-left: 50px;
+  font-size: 30px;
+}
+.sectionIndex .contactButton {
+  margin: 40px 60px;
+}
+.sectionIndex .contactButton button {
+  height: 50px;
+  font-size: 30px;
+}
+
+.sectionSobreNosotros {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.sectionSobreNosotros img {
+  height: 200px;
+}
+.sectionSobreNosotros .divSobreNosotros1 {
+  margin: 40px 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionSobreNosotros .divSobreNosotros1 h2 {
+  font-size: 28px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.sectionSobreNosotros .divSobreNosotros2 {
+  margin: 5px 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionSobreNosotros .divSobreNosotros2 h2 {
+  font-size: 20px;
+}
+.sectionSobreNosotros .divSobreNosotros2 img {
+  width: 405px;
+}
+.sectionSobreNosotros .divSobreNosotros2 div {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.sectionSobreNosotros .divSobreNosotros2 div h2 {
+  margin-bottom: 20px;
+}
+
+.sectionContacto {
+  margin: 30px 0 50px;
+}
+.sectionContacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionContacto form label {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.sectionContacto form input {
+  height: 30px;
+}
+.sectionContacto form .number::-webkit-inner-spin-button, .sectionContacto form .number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.sectionContacto form textarea {
+  resize: none;
+  height: 100px;
+}
+.sectionContacto form .botonForm {
+  margin-top: 30px;
+  height: 35px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sectionLocalidades {
+  margin: 40px;
+  width: 900px;
+}
+.sectionLocalidades iframe {
+  height: 400px;
+  width: 800px;
+  margin-left: 50px;
+}
+.sectionLocalidades .carousel {
+  width: auto;
+}
+.sectionLocalidades .carouselLocal {
+  width: auto;
+}
+.sectionLocalidades .carouselLocal .botonIndicador {
+  height: 15px;
+}
+.sectionLocalidades h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.sectionClientes .divClientes2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.sectionClientes .divClientes2 img {
+  height: 300px;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+.sectionClientes .divClientes2 .divDivClientes2 {
+  display: flex;
+  flex-direction: column;
+}
+.sectionClientes .divClientes2 .divDivClientes2 p {
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+.sectionClientes .divClientes2 .divDivClientes2 ul {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  list-style-type: circle;
+}
+.sectionClientes .divClientes2 .divDivClientes2 ul li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.sectionClientes .divClientes2 .divDivClientes2 ul li p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.sectionClientes .divClientes2 .divDivClientes2 ul li h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.sectionClientes .divClientes1 h2 {
+  font-size: 20px;
+  padding: 30px;
+}
+
+/* -------------------------------------------------FOOTER------------------------------------------------ */
+footer {
+  height: 140px;
+  background-color: #37371F;
+  width: 100%;
+}
+footer .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .a {
+  margin-top: 48px;
+}
+footer .redes img {
+  width: 30px;
+}
+footer h3 {
+  font-size: 15px;
+  color: white;
+}
+
+/* ------------------------------------------------RESPONSIVE------------------------------------------------ */
+@media (max-width: 1276px) {
+  .mainIndex {
+    width: 60%;
+  }
+  .mainIndex h1 {
+    font-size: 75px;
+  }
+  .sectionIndex {
+    width: 70%;
+  }
+  .sectionIndex h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1228px) {
+  header nav img {
+    margin-left: 0;
+  }
+  header nav ul {
+    margin-left: 50px;
+  }
+  header nav ul li {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 1007px) {
+  .fondoIndex .mainIndex {
+    width: 80%;
+  }
+  .sectionIndex .contactButton {
+    margin: 35px 50px;
+  }
+  .sectionIndex .contactButton button {
+    height: 40px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 950px) {
+  .sectionLocalidades {
+    width: 90%;
+    margin-right: 10px;
+  }
+  .sectionLocalidades iframe {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: auto;
+  }
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+  .fondoIndex .mainIndex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .fondoIndex .mainIndex h1 {
+    margin: 20px;
+    font-size: 65px;
+  }
+  .fondoIndex .sectionIndex h2 {
+    font-size: 26px;
+    margin-left: 20px;
+  }
+  .fondoIndex .sectionIndex .contactButton {
+    margin: 20px;
+  }
+  .fondoIndex .sectionIndex .contactButton button {
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+    font-size: 25px;
+  }
+  .mainSobreNosotros, .mainLocalidades {
+    text-align: center;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 {
+    flex-direction: column;
+    width: 90%;
+    flex-direction: column;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 h2 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 img {
+    width: auto;
+    height: auto;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 {
+    flex-direction: column;
+    width: 90%;
+    flex-direction: column;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 h2 {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 img {
+    width: auto;
+    height: auto;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 div {
+    margin: 0;
+  }
+  .sectionLocalidades {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .sectionClientes .divClientes2 {
+    flex-direction: column;
+  }
+  .sectionClientes .divClientes2 img {
+    margin-right: 30px;
+  }
+  .sectionClientes .divDivClientes2 {
+    margin-top: 20px;
+  }
+  footer {
+    height: auto;
+    padding: 10px;
+  }
+  footer .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .footer .a {
+    margin-top: 20px;
+  }
+  footer .footer .redes img {
+    width: 25px;
+  }
+  footer .footer h3 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 640px) {
+  .fondoIndex .sectionIndex {
+    width: 80%;
+  }
+  .fondoIndex .sectionIndex h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .fondoIndex {
+    height: auto;
+  }
+  .fondoIndex .mainIndex {
+    width: 100%;
+  }
+  .fondoIndex .mainIndex h1 {
+    font-size: 60px;
+  }
+  .fondoIndex .sectionIndex {
+    width: 100%;
+  }
+  .mainSobreNosotros h1, .mainLocalidades h1 {
+    font-size: 25px;
+  }
+  .mainClientes h1 {
+    font-size: 25px;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 img {
+    width: 90%;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 div {
+    margin-right: 20px;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 img {
+    width: 90%;
+  }
+  .sectionIndex h2 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .sectionIndex .contactButton button {
+    margin-top: 30px;
+    height: 100px;
+    font-size: 30px;
+  }
+  .sectionLocalidades {
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .sectionLocalidades .carousel {
+    width: auto;
+  }
+  .sectionLocalidades iframe {
+    width: 100%;
+    margin-left: 0;
+  }
+  .sectionClientes .divClientes2 {
+    flex-direction: column;
+  }
+  .sectionClientes .divClientes2 img {
+    height: auto;
+  }
+  .mainContacto h1 {
+    font-size: 25px;
+  }
+  .mainContacto p {
+    font-size: 15px;
+    margin: 20px;
+  }
+}
+@media (max-width: 390px) {
+  .sectionSobreNosotros {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .sectionSobreNosotros .divSobreNosotros1 h2 {
+    font-size: 20px;
+  }
+  .sectionSobreNosotros .divSobreNosotros2 h2 {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

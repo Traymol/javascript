@@ -1,0 +1,10 @@
+$colorMain: #90BE6D;
+$fontMain: 40px;
+$color2: #EA9010;
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
