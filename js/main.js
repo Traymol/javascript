@@ -1,8 +1,22 @@
+alert ("Hola!")
+
+let saludador= prompt("Saludá con un -Hola-")
+
+for (let i = 0; i < 69; i++) {
+    if (saludador == "Hola") {
+        alert("Gracias por saludar");
+        break;
+    }else {
+        saludador= prompt("Saludame :C");
+    }
+};
+
+
 let num1= parseInt(prompt("Ingresa tu primer número"))
 let num2= parseInt(prompt("Ingresa tu segundo número"))
 
-function calculadora(num1,num2,operacion){
-    switch (operacion) {
+function calculadora(num1,num2,simbolo){
+    switch (simbolo) {
         case "+": 
             return num1 + num2;
         case "-": 
@@ -28,6 +42,8 @@ if(num2 == 0) {
 }else{
     alert("La división entre " + num1 + " y " + num2 + " es " + "= " + resultadoDivi);
 }
+
+
 /* let resultadoSuma= calculadora(num1,num2,"+");
 let resultadoResta= calculadora(num1,num2,"-");
 let resultadoMulti= calculadora(resultadoResta,resultadoSuma,"*");
