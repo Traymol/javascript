@@ -34,10 +34,18 @@ const problematica = [
     {nombre: "Palomas", valor: 150}
 ];
 
+// Función para buscar problemáticas por nombre
+function busquedaDeProblematica(busqueda) {
+    busqueda = busqueda.toLowerCase();
+    const resultadoProblematicas = problematica.filter(problematica => problematica.nombre.toLowerCase().includes(busqueda));
+    return resultadoProblematicas;
+};
+
 // Éste log lo usé simplemete para ver como eran los objetos en el arrray 
 for (const nombre of problematica) {
     console.log(nombre);
 }
+
 // Acá hago un prompt parseado para que el cliente elija cual de los problemas tiene 
 let seleccionDeProblematica = parseInt(prompt("Seleccioná tu problemática:\n1. Roedores\n2. Cucarachas\n3. Murcielagos\n4. Palomas"));
 
@@ -60,5 +68,19 @@ if (isNaN(metrosCuadrados) || metrosCuadrados <= 0) {
 
 // Y finalmente con un alert le mostramos el resultado del presupuesto
     alert(`Resumen del presupuesto:\nProblemática: ${problematicaSeleccionada.nombre}\nMetros cuadrados: ${metrosCuadrados}\nValor total: $${valorTotal}`);
+
+// Buscador de problemática
+    const buscarProblematica = prompt("Buscá tu problemática:");
+    if (buscarProblematica) {
+        const resultadoProblematicas = busquedaDeProblematica(buscarProblematica);
+        if (resultadoProblematicas.length > 0) {
+            alert("Problemáticas:");
+            for (const problema of resultadoProblematicas) {
+                alert(`${problema.nombre}: $${problema.valor} por metro cada metro cuadrado`);
+            }
+        } else {
+            alert("No se encontraron problemáticas que coincidan con la búsqueda.");
+        }
     }
+}
 }
