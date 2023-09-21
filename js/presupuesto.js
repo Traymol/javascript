@@ -9,6 +9,12 @@ const problematica = [
     { nombre: "Palomas", valor: 2.2 }
 ];
 
+function busquedaDeProblematica(busqueda) {
+    busqueda = busqueda.toLowerCase();
+    const resultadoProblematicas = problematica.filter(problematica => problematica.nombre.toLowerCase().includes(busqueda));
+    return resultadoProblematicas;
+};
+
     boton.addEventListener("click", () => {
         
         Swal.fire({
@@ -48,8 +54,29 @@ const problematica = [
                         Swal.fire({
                             title: "Resumen del presupuesto",
                             html: `Problemática: ${problematicaSeleccionada.nombre}<br>Metros cuadrados: ${metrosCuadrados}<br>Valor total: $${valorTotal.toFixed(2)}`
-                            
-                        });
+                        }).then((result3) => {
+                            if (!result3.isDismissed) {
+                                Swal.fire({
+                                    title: "Buscá tu problemática",
+                                    input: "text",
+                                    inputPlaceholder: "Escribí tu problemática",
+                                    showCancelButton: true,
+                                    cancelButtonText: "Cancelar"
+                                }).then((result4) => {
+                                    if (!result4.isDismissed && result4.value) {
+                                        const buscarProblematica = result4.value;
+                                        const resultadoProblematicas = busquedaDeProblematica(buscarProblematica);
+                                        if (resultadoProblematicas.length > 0) {
+                                            for (const problema of resultadoProblematicas) {
+                                                Swal.fire(`${problema.nombre}: $${problema.valor} cada metro cuadrado`);
+                                            }
+                                        } else {
+                                            Swal.fire("No se encontraron problemáticas que coincidan con la búsqueda.");
+                                        }
+                                    }
+                                });
+                            }
+                        })
                     }
                 });
             }
